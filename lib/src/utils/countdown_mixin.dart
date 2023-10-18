@@ -216,12 +216,12 @@ mixin CountdownMixin<T extends StatefulWidget> on State<T> {
 
   int hoursFirstDigit(Duration duration) {
     if (duration.inHours <= 0) return 0;
-    return (duration.inHours % 24) ~/ 10;
+    return duration.inHours ~/ 10;
   }
 
   int hoursSecondDigit(Duration duration) {
     if (duration.inHours <= 0) return 0;
-    return (duration.inHours % 24) % 10;
+    return duration.inHours % 10;
   }
 
   int minutesFirstDigit(Duration duration) {
